@@ -1,0 +1,4 @@
+$ZSH/bin/keyboard_setup
+stalonetray -c $XDG_CONFIG_HOME/stalonetray/stalonetrayrc &
+nm-applet &
+exec xmonad 

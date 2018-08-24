@@ -1,0 +1,38 @@
+# set default editor
+export VISUAL=vim
+export EDITOR=vim
+export PAGER=less
+
+# shortcut to this dotfiles path is $ZSH
+export ZSH=$HOME/dotfiles
+
+# Stash your environment variables in ~/.localrc. This means they'll stay out
+# of your main dotfiles repository (which may be public, like this one), but
+# you'll have access to them in your scripts.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+typeset -U path_files
+typeset -U aliasas_files
+path_files=($ZSH/**/path.zsh)
+aliases_files=($ZSH/**/aliases.zsh)
+# exclude everything in vim.symlink
+path_files=(${path_files[@]//*vim.symlink*})
+aliases_files=(${aliases_files[@]//*vim.symlink*})
+
+# load the path files
+for file in $path_files
+do
+  source $file
+done
+
+# load the aliases files
+for file in $aliases_files
+do
+  source $file
+done
+
+unset path_files
+unset aliases_files

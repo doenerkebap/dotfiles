@@ -1,0 +1,18 @@
+[user]
+	name = doener
+	email = doenerkebap@mailbox.org
+[core]
+	editor = vim
+[push]
+	default = simple
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[diff "pdf2txt"]
+	textconv = pdf2txt
+[merge]
+	conflictstyle = diff3
+	tool = vimdiff
+[mergetool]
+	prompt = false
