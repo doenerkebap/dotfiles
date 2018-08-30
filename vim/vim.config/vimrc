@@ -47,8 +47,8 @@ set encoding=utf-8      " The encoding displayed.
 set fileencoding=utf-8  " The encoding written to file.
 set scroll=2            " Scroll 2 lines with CTRL-U and CTRL-D
 
-let buftabline_show=1
-let g:ctrlp_follow_symlinks = 1
+:noremap h ^
+:noremap l $
 
 " Use <C-L> to clear the highlighting of search.
 if maparg('<C-L>', 'n') ==# ''
