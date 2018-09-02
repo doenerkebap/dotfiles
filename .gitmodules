@@ -1,3 +1,6 @@
 [submodule "vim/vim.config/pack/plugins/start/surround"]
 	path = vim/vim.config/pack/plugins/start/surround
 	url = https://tpope.io/vim/surround.git
+[submodule "vim/vim.config/pack/plugins/start/repeat"]
+	path = vim/vim.config/pack/plugins/start/repeat
+	url = https://tpope.io/vim/repeat.git
