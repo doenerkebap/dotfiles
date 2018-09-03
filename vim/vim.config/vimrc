@@ -10,6 +10,9 @@ set viminfo+='1000,n$XDG_CACHE_HOME/vim/viminfo
 set runtimepath^=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
 set packpath^=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after
 
+set termguicolors       " Enable 24bit color
+colorscheme solarized8  " Use solarized theme
+set background=dark     " --
 syntax on               " Enable syntax highlighting
 set hlsearch            " Highlight search results
 filetype on             " Enable file type detection

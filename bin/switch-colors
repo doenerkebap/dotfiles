@@ -13,7 +13,8 @@ get_current_color()
 switch()
 {
     to="$1"
-    termite "$to"
+    switch_vim "$to"
+    switch_termite "$to"
     echo "$to" > "$FILE"
 }
 
@@ -30,10 +31,18 @@ toggle()
     esac
 }
 
-termite()
+switch_termite()
 {
     cat "$ZSH"/termite/termite.config/{base-config,color-config-"$1"} > "$ZSH"/termite/termite.config/config
     killall -USR1 termite
 }
+
+switch_vim()
+{
+    for instance in $(vim --serverlist); do
+        vim --servername $instance --remote-send "<Esc>:set background=$1<CR>"
+    done
+}
+
 
 toggle
