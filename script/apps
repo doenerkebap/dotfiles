@@ -26,3 +26,5 @@ xorg-xrandr
 alsa-utils
 gutenprint
 jupyter-notebook
+zsh
+zsh-completions

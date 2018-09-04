@@ -1,9 +1,7 @@
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
-# exclude everything in vim.symlink
-config_files=(${config_files[@]//*vim.symlink*})
 # exclude path and aliases (already loaded in .zshenv)
-config_files=(${${config_files:#*/path.zsh}:#*/aliases.zsh})
+config_files=(${${${config_files:#*/path.zsh}:#*/aliases.zsh}:#$ZSH/zsh/plugins/*})
 
 
 # load everything but the completion files
