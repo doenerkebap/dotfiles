@@ -3,7 +3,6 @@ HISTSIZE=10000                 # ?
 SAVEHIST=10000                 # ?
 setopt APPENDHISTORY           # add history
 setopt EXTENDED_HISTORY        # add timestamps to history
-setopt HIST_IGNORE_ALL_DUPS    # no duplicates
 setopt HIST_REDUCE_BLANKS      # no superfluous white space
 setopt SHARE_HISTORY           # import from and append to history file
 
