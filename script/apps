@@ -28,3 +28,7 @@ gutenprint
 jupyter-notebook
 zsh
 zsh-completions
+zsh-autosuggestions
+zsh-syntax-highlighting
+powerline-fonts
+spaceship-prompt
