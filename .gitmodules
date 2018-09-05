@@ -7,6 +7,3 @@
 [submodule "vim/vim.config/pack/themes/opt/solarized8"]
 	path = vim/vim.config/pack/themes/opt/solarized8
 	url = https://github.com/lifepillar/vim-solarized8.git
-[submodule "zsh/plugins/zsh-autosuggestions"]
-	path = zsh/plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
