@@ -21,7 +21,7 @@ scrollback_lines = 10000
 #browser = xdg-open
 
 # "system", "on" or "off"
-cursor_blink = on
+#cursor_blink = system
 
 # "block", "underline" or "ibeam"
 #cursor_shape = block
@@ -38,18 +38,6 @@ cursor_blink = on
 # "off", "left" or "right"
 #scrollbar = off
 
-[hints]
-#font = Monospace 12
-#foreground = #dcdccc
-#background = #3f3f3f
-#active_foreground = #e68080
-#active_background = #3f3f3f
-#padding = 2
-#border = #3f3f3f
-#border_width = 0.5
-#roundness = 2.0
-
-# Solarized dark color scheme
 
 [colors]
 foreground = #839496
@@ -78,3 +66,16 @@ color12 = #839496
 color13 = #6c71c4
 color14 = #93a1a1
 color15 = #fdf6e3
+
+[hints]
+#font = Monospace 12
+#foreground = #dcdccc
+#background = #3f3f3f
+#active_foreground = #e68080
+#active_background = #3f3f3f
+#padding = 2
+#border = #3f3f3f
+#border_width = 0.5
+#roundness = 2.0
+
+# vim: ft=dosini cms=#%s
