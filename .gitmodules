@@ -4,3 +4,6 @@
 [submodule "vim/vim.config/pack/plugins/start/repeat"]
 	path = vim/vim.config/pack/plugins/start/repeat
 	url = https://tpope.io/vim/repeat.git
+[submodule "zsh/base16"]
+	path = zsh/base16
+	url = https://github.com/chriskempson/base16-shell.git
