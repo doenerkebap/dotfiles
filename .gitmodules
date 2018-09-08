@@ -10,3 +10,6 @@
 [submodule "vim/vim.config/pack/themes/opt/base16"]
 	path = vim/vim.config/pack/themes/opt/base16
 	url = git://github.com/chriskempson/base16-vim.git
+[submodule "zathura/base16"]
+	path = zathura/base16
+	url = https://github.com/nicodebo/base16-zathura
