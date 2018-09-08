@@ -10,6 +10,8 @@ set viminfo+='1000,n$XDG_CACHE_HOME/vim/viminfo
 set runtimepath^=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
 set packpath^=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after
 
+let base16colorspace=256 " Access colors present in 256 colorspace
+colorscheme base16-default-dark
 syntax on               " Enable syntax highlighting
 set hlsearch            " Highlight search results
 filetype on             " Enable file type detection
