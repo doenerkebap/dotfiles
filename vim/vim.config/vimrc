@@ -51,9 +51,6 @@ set encoding=utf-8      " The encoding displayed.
 set fileencoding=utf-8  " The encoding written to file.
 set scroll=2            " Scroll 2 lines with CTRL-U and CTRL-D
 
-:noremap h ^
-:noremap l $
-
 " Use <C-L> to clear the highlighting of search.
 if maparg('<C-L>', 'n') ==# ''
    nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
