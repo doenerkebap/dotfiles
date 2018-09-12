@@ -1,4 +1,5 @@
 alias q='exit'
+alias :q='exit'
 alias c='clear'
 
 alias ll='ls -l'
