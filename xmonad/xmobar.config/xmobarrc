@@ -1,12 +1,11 @@
-Config { font = "xft:Noto Sans Mono:size=12:antialias=true"
+Config { font = "xft:Consolas for Powerline:size=14:antialias=true"
         , borderColor = "black"
-        , border = TopB
-        , bgColor = "black"
-        , fgColor = "grey"
+        , bgColor = "#00151b" 
+        , fgColor = "#93a1a1" 
         , position = TopW L 120
-        , commands = [    Run Network "enp0s25" ["-L","0","-H","32","--normal","green","--high","red"] 10
-                        , Run Network "wlp3s0" ["-L","0","-H","32","--normal","green","--high","red"] 10
-                        , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
+        , commands = [    Run Network "enp0s25" ["-L","0","-H","32","--normal","#859900","--high","#dc322f"] 10
+                        , Run Network "wlp3s0" ["-L","0","-H","32","--normal","#859900","--high","#dc322f"] 10
+                        , Run Cpu ["-L","3","-H","50","--normal","#859900","--high","#dc322f"] 10
                         , Run Memory ["-t","Mem: <usedratio>%"] 10
                         , Run Swap [] 10
                         , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
@@ -14,5 +13,5 @@ Config { font = "xft:Noto Sans Mono:size=12:antialias=true"
                         ]
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% | %cpu% | %memory% * %swap% | %enp0s25% - %wlp3s0% }{<fc=#ee9a00>%date%</fc> "
+        , template = "%StdinReader% | %cpu% | %memory% * %swap% | %enp0s25% - %wlp3s0% }{<fc=#268bd2>%date%</fc> "
         }
