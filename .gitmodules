@@ -12,7 +12,7 @@
 	url = git://github.com/chriskempson/base16-vim.git
 [submodule "zathura/base16"]
 	path = zathura/base16
-	url = https://github.com/nicodebo/base16-zathura
+	url = https://github.com/doenerkebap/base16-zathura.git
 [submodule "python/base16"]
 	path = python/base16
 	url = https://github.com/memeplex/base16-prompt-toolkit
