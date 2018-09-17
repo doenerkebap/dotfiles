@@ -16,3 +16,6 @@
 [submodule "python/base16"]
 	path = python/base16
 	url = https://github.com/memeplex/base16-prompt-toolkit
+[submodule "vim/vim.config/pack/plugins/start/ale"]
+	path = vim/vim.config/pack/plugins/start/ale
+	url = https://github.com/w0rp/ale.git
