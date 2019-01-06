@@ -1,4 +1,5 @@
-setxkbmap -layout de -variant nodeadkeys
+#setxkbmap -layout de -variant nodeadkeys
+setxkbmap -layout us
 setxkbmap -option 'caps:swapescape' -option 'caps:ctrl_modifier'
 xmodmap -e 'keycode 255 = Escape'
 xcape -e '#66=Escape'
