@@ -5,7 +5,17 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-unimpaired'
-
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'iCyMind/NeoSolarized'
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-indent'
+Plug 'tkhren/vim-textobj-numeral'
+Plug 'sgur/vim-textobj-parameter'
+Plug 'Julian/vim-textobj-variable-segment'
+Plug 'Chiel92/vim-autoformat'
+Plug 'vitalk/vim-shebang'
 Plug 'roxma/nvim-yarp'
 Plug 'ncm2/ncm2'
 Plug 'autozimu/LanguageClient-neovim', {
@@ -22,9 +32,15 @@ let g:LanguageClient_serverCommands = {
     \ 'python': ['/usr/bin/pyls'],
     \ }
 
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
+set termguicolors
+set background=dark
+colorscheme NeoSolarized
 set nocompatible        " Make vim more useful
 set backup              " Enable backup 
+set backupdir=$XDG_DATA_HOME/nvim/backup
 set undofile            " Enable undo	
 set hidden              " Required for operations modifying multiple buffers like rename.
 set completeopt=noinsert,menuone,noselect " completion menu options
@@ -58,7 +74,7 @@ set sidescrolloff=5     " --
 set mouse=a             " Enable the use of the mouse
 set encoding=utf-8      " Character encoding
 set autoread            " Reload file if it has been changed outside of vim
-set cmdheight=2		" Prevents hit enter to continue dialogs
+"set cmdheight=2		" Prevents hit enter to continue dialogs
 set tags+=../tags       " Search for tags file also in parent dire
 set ignorecase		" Case insensitive search
 set smartcase		" Case sensitive when search contains uppercase characters
@@ -91,9 +107,7 @@ vnoremap j gj
 nnoremap k gk
 vnoremap k gk
 
-" Switching buffers
-nnoremap <C-J> :bn<cr>
-nnoremap <C-K> :bp<cr>
+
 
 " Yank / paste to system clipboard
 vnoremap gy "+y
@@ -134,7 +148,14 @@ vnoremap <silent>ai :<C-U>cal <SID>IndTxtObj(0)<CR><Esc>gv
 vnoremap <silent>ii :<C-U>cal <SID>IndTxtObj(1)<CR><Esc>gv
 
 " Language server features mappings
-nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
-nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>
-nnoremap <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+function LC_maps()
+  if has_key(g:LanguageClient_serverCommands, &filetype)
+    nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<cr>
+    nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
+    nnoremap <buffer> <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+  endif
+endfunction
 
+autocmd FileType * call LC_maps()
+
+set formatexpr=LanguageClient#textDocument_rangeFormatting_sync()

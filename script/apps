@@ -34,3 +34,10 @@ powerline-fonts
 spaceship-prompt
 p7zip
 python-language-server
+python-jedi
+python-pyflakes
+python-pycodestyle
+python-pylint
+python-rope
+yapf
+
