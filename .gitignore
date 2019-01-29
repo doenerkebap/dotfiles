@@ -1,4 +1,5 @@
 .directory
 .zcompdump
-
+*.o
+*.hi
 __pycache__
