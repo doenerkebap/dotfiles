@@ -6,9 +6,9 @@ import qualified Data.Map as M
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.DynamicLog (xmobar)
 import Graphics.X11.ExtraTypes.XF86
--- import XMonad.Hooks.DynamicLog
--- import XMonad.Util.Run(spawnPipe)
--- import System.IO
+import XMonad.Hooks.DynamicLog
+import XMonad.Util.Run(spawnPipe)
+import System.IO
 
 main = do
     xmonad =<< xmobar desktopConfig
@@ -16,6 +16,8 @@ main = do
 	, keys = myKeys <+> keys desktopConfig
         , manageHook = manageDocks <+> manageHook desktopConfig
 	, layoutHook = avoidStruts $ myLayoutHook
+        , normalBorderColor = solarizedBase01
+        , focusedBorderColor = solarizedRed
         }
 
 myTerminal = "termite -d $(cat $XDG_CACHE_HOME/last_dir)"
@@ -31,3 +33,19 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList
     ]
 myLayoutHook = Full ||| ResizableTall 1 (2/100) (1/2) [] ||| TwoPane (2/100) (1/2) ||| Mirror (ResizableTall 1 (2/100) (1/2) [])
 
+solarizedBase03  = "#002b36"
+solarizedBase02  = "#073642"
+solarizedBase01  = "#586e75"
+solarizedBase00  = "#657b83"
+solarizedBase0   = "#839496"
+solarizedBase1   = "#93a1a1"
+solarizedBase2   = "#eee8d5"
+solarizedBase3   = "#fdf6e3"
+solarizedYellow  = "#b58900"
+solarizedOrange  = "#cb4b16"
+solarizedRed     = "#dc322f"
+solarizedMagenta = "#d33682"
+solarizedViolet  = "#6c71c4"
+solarizedBlue    = "#268bd2"
+solarizedCyan    = "#2aa198"
+solarizedGreen = "#859900"
