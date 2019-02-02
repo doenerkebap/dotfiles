@@ -24,7 +24,7 @@ myTerminal = "termite -d $(cat $XDG_CACHE_HOME/last_dir)"
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList
     [ ((modm, xK_u), sendMessage MirrorShrink)
     , ((modm, xK_i), sendMessage MirrorExpand)
-    , ((modm, xK_p), spawn "$ZSH/dmenu/dmenu_run-dark")
+    , ((modm, xK_p), spawn "$ZSH/dmenu/menu")
     , ((0, xF86XK_AudioLowerVolume), spawn "amixer set Master 2-")
     , ((0, xF86XK_AudioRaiseVolume), spawn "amixer set Master 2+")
     , ((0, xF86XK_AudioMute), spawn "amixer set Master toggle")

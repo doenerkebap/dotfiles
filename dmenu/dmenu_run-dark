@@ -1,3 +1,0 @@
-#!/bin/sh
-source ${XDG_CONFIG_HOME}/solarized/colors.ini
-exec dmenu_run -h 30 -nb $base03 -nf $base1 -sb $base02 -sf $yellow -fn "Consolas for Powerline FixedD-14" -h 24
