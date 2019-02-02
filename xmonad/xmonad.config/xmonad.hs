@@ -29,5 +29,5 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList
     , ((0, xF86XK_MonBrightnessUp), spawn "xbacklight -inc 4")
     , ((0, xF86XK_MonBrightnessDown), spawn "xbacklight -dec 4")
     ]
-myLayoutHook = Full ||| ResizableTall 1 (2/100) (1/2) [] ||| TwoPane (2/100) (1/2) ||| Mirror (Tall 1 (2/100) (1/2))
+myLayoutHook = Full ||| ResizableTall 1 (2/100) (1/2) [] ||| TwoPane (2/100) (1/2) ||| Mirror (ResizableTall 1 (2/100) (1/2) [])
 
