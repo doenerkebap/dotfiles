@@ -1,6 +1,6 @@
 $ZSH/bin/keyboard_setup
 stalonetray -c $XDG_CONFIG_HOME/stalonetray/stalonetrayrc &
 nm-applet &
-feh --bg-scale ~/dotfiles/backgrounds/solarized-arch.png &
 unclutter &
+feh --bg-center ~/dotfiles/backgrounds/solarized-mountains_1366.png
 exec xmonad 
